@@ -1,0 +1,148 @@
+/* import from google font */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
+:root {
+    /* Colors */
+    --clr-dark: 230 35% 7%;
+    --clr-accent: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+
+    /* Fonts Family */
+    --ff-belle: 'Bellefair', serif;
+    --ff-barlow: 'Barlow', sans-serif;
+    --ff-barlow-cond: 'Barlow Condensed', sans-serif;
+
+    /* Fonts Size */
+    --fs-150: 150px;
+    --fs-100: 100px;
+    --fs-56: 56px;
+    --fs-32: 32px;
+    --fs-28: 28px;
+    --fs-18: 18px;
+    --fs-16: 16px;
+    --fs-14: 14px;
+}
+
+/* Utility Classes */
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.numbering span {
+    font-weight: 700;
+    margin-inline-end: 10px;
+}
+
+/* Typograhy */
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+/* Fonts Family Classes */
+.ff-belle {
+    font-family: var(--ff-belle);
+}
+
+.ff-barlow {
+    font-family: var(--ff-barlow);
+}
+
+.ff-barlow-cond {
+    font-family: var(--ff-barlow-cond);
+}
+
+
+
+/* Fonts Size Classes*/
+.fs-150 {
+    font-size: var(--fs-150);
+}
+
+.fs-100 {
+    font-size: var(--fs-100);
+}
+
+.fs-56 {
+    font-size: var(--fs-56);
+}
+
+.fs-32 {
+    font-size: var(--fs-32);
+}
+
+.fs-28 {
+    font-size: var(--fs-28);
+}
+
+.fs-18 {
+    font-size: var(--fs-18);
+}
+
+.fs-16 {
+    font-size: var(--fs-16);
+}
+
+.fs-14 {
+    font-size: var(--fs-14);
+}
+
+
+
+/* Letter Spacing Classes */
+.letter-space-1 {
+    letter-spacing: 4.75px;
+}
+
+.letter-space-2 {
+    letter-spacing: 2.7px;
+}
+
+.letter-space-3 {
+    letter-spacing: 2.35px;
+}
+
+
+
+/* Interactive Element */
+
+/* Underline-Indicator */
+.underline-indicator {
+    display: flex;
+    gap: 135px;
+    color: hsl(var(--clr-white));
+    letter-spacing: 2.7px;
+    font-size: var(--fs-16);
+    font-family: var(--ff-barlow-cond);
+}
+
+.underline-indicator>* {
+    cursor: pointer;
+    padding: 35px 0;
+    border-bottom: 3px solid hsl(var(--clr-white) / 0);
+}
+
+.underline-indicator>*:hover,
+.underline-indicator>*:focus {
+    border-color: hsl(var(--clr-white) / .5);
+}
+
+.underline-indicator>.active {
+    border-color: hsl(var(--clr-white));
+}
+
+.tab-list {
+    gap: 35px;
+}
+
+
+
+body {
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
