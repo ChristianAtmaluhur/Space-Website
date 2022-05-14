@@ -1,6 +1,39 @@
 /* import from google font */
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+picture, 
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl( var(--clr-white) );
+    background-color: hsl( var(--clr-dark) );
+    line-height: 1.5;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    overflow-x: hidden;
+}
+
 :root {
     /* Colors */
     --clr-dark: 230 35% 7%;
@@ -27,6 +60,10 @@
 .flex {
     display: flex;
     gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
 }
 
 .numbering span {
@@ -88,7 +125,18 @@
     font-size: var(--fs-14);
 }
 
+/* Color Classes */
+.text-dark {
+    color: hsl(var(--clr-dark));
+}
 
+.text-accent {
+    color: hsl(var(--clr-accent));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
 
 /* Letter Spacing Classes */
 .letter-space-1 {
@@ -109,18 +157,19 @@
 
 /* Underline-Indicator */
 .underline-indicator {
-    display: flex;
-    gap: 135px;
-    color: hsl(var(--clr-white));
-    letter-spacing: 2.7px;
-    font-size: var(--fs-16);
-    font-family: var(--ff-barlow-cond);
+    gap: (--gap, 1rem);
 }
 
 .underline-indicator>* {
     cursor: pointer;
     padding: 35px 0;
     border-bottom: 3px solid hsl(var(--clr-white) / 0);
+}
+
+.underline-indicator>*>* {
+    color: hsl(var(--clr-white));
+    text-decoration: none;
+    letter-spacing: 2.7px;
 }
 
 .underline-indicator>*:hover,
@@ -132,17 +181,88 @@
     border-color: hsl(var(--clr-white));
 }
 
+
+
+/* Tabs */
 .tab-list {
     gap: 35px;
 }
 
 
 
-body {
-    background: #000;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Slider */
+.slide-one-indicator>* {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: hsl(var(--clr-white) / .17);
 }
 
+.slide-one-indicator>*:hover,
+.slide-one-indicator>*:focus {
+    background: hsl(var(--clr-white) / .5);
+}
+
+.slide-one-indicator>.active {
+    background: hsl(var(--clr-white));
+}
+
+.slide-two-indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.slide-two-indicator>* {
+    width: 80px;
+    height: 80px;
+    color: hsl(var(--clr-white));
+    border-radius: 50%;
+    border: 1px solid hsl(var(--clr-white) / .25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-two-indicator>*:hover,
+.slide-two-indicator>*:focus {
+    border-color: hsl(var(--clr-white));
+}
+
+.slide-two-indicator>.active {
+    background: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
+}
+
+/* Landing Page Button */
+.large-btn {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    display: inline-grid;
+    place-items: center;
+    z-index: 1;
+    font-family: var(--ff-belle);
+    font-size: var(--fs-32);
+    letter-spacing: 2px;
+    border: none;
+}
+
+.large-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    background: hsl(var(--clr-white) / .1);
+    transition: transform 500ms ease-in-out;
+}
+
+.large-btn:hover::after,
+.large-btn:focus::after {
+    transform: scale(1.5);
+}

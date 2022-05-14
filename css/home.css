@@ -1,0 +1,104 @@
+.home {
+    background-size: cover;
+    background-position: center;
+    background-image: url(/assets/home/background-home-mobile.jpg);
+}
+
+/* Mobile Screen */
+/* Header */
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.home>header {
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 0;
+}
+
+.mobile-btn {
+    position: absolute;
+    top: 30px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    background-size: cover;
+    background-image: url(/assets/shared/icon-hamburger.svg);
+    cursor: pointer;
+    z-index: 15;
+}
+
+.mobile-btn[aria-expanded='true'] {
+    background-image: url(/assets/shared/icon-close.svg);
+}
+
+.primary-navigation {
+    z-index: 10;
+    position: fixed;
+    inset: 0 0 0 30vw;
+    background: hsl(var(--clr-white) / .1);
+    backdrop-filter: blur(2rem);
+    flex-direction: column;
+    gap: 30px;
+    padding: 120px 0 0 32px;
+    transform: translateX(100%);
+    transition: transform 750ms ease-in-out;
+}
+
+.primary-navigation[data-visible='true'] {
+    transform: translateX(0);
+}
+
+.primary-navigation>* {
+    border: none;
+    padding: 0;
+}
+
+/* Main */
+.grid-home {
+    padding-inline: 25px;
+    text-align: center;
+    justify-content: center;
+}
+
+.grid-home>*:first-child {
+    margin-top: 50px;
+}
+
+
+
+.grid-home p {
+    width: 45ch;
+}
+
+
+
+
+@media (min-width: 45em) {
+    .home {
+        background-image: url(/assets/home/background-home-desktop.jpg);
+    }
+}
+
+@media (max-width: 35em) {
+    :root {
+        --fs-150: 80px;
+        --fs-32: 20px;
+        --fs-28: 16px; 
+        --fs-18: 15px;
+    }
+
+    .large-btn {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 35em) and (max-width: 45em) {
+    .home {
+        background-image: url(/assets/home/background-home-tablet.jpg);
+    }
+}
