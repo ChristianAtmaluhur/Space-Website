@@ -17,7 +17,7 @@ p {
     font-weight: 400;
 }
 
-picture, 
+picture,
 img {
     max-width: 100%;
 }
@@ -25,8 +25,8 @@ img {
 body {
     font-family: var(--ff-sans-normal);
     font-size: var(--fs-400);
-    color: hsl( var(--clr-white) );
-    background-color: hsl( var(--clr-dark) );
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-dark));
     line-height: 1.5;
     min-height: 100vh;
     display: grid;
@@ -267,3 +267,132 @@ body {
     transform: scale(1.5);
 }
 
+/* NavBar */
+
+/* Header */
+.logo {
+    width: 48px;
+    height: 48px;
+}
+
+body>header {
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 0;
+}
+
+.mobile-btn {
+    display: none;
+}
+
+.line {
+    display: none;
+}
+
+.primary-navigation {
+    background: hsl(var(--clr-white) / .1);
+    backdrop-filter: blur(2rem);
+}
+
+
+/* Desktop Responsive */
+@media (min-width: 45em) {
+    body>header {
+        padding: 0 0 0 55px;
+    }
+
+    .primary-navigation {
+        padding-inline-start: clamp(1rem, 8vw, 123px);
+        padding-inline-end: 165px;
+    }
+
+    header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 100%;
+        margin-right: -2.5rem;
+        background: hsl(var(--clr-white) / .25);
+        order: 2;
+    }
+
+    nav {
+        order: 3;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 35em) {
+    :root {
+        --fs-150: 80px;
+        --fs-32: 20px;
+        --fs-28: 16px;
+        --fs-18: 15px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-btn {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: transparent;
+        background-size: cover;
+        background-image: url(/assets/shared/icon-hamburger.svg);
+        cursor: pointer;
+        z-index: 15;
+    }
+
+    .mobile-btn[aria-expanded='true'] {
+        background-image: url(/assets/shared/icon-close.svg);
+    }
+
+    .primary-navigation {
+        z-index: 10;
+        position: fixed;
+        inset: 0 0 0 30vw;
+        flex-direction: column;
+        gap: 30px;
+        padding: 120px 0 0 32px;
+        transform: translateX(100%);
+        transition: transform 750ms ease-in-out;
+    }
+
+    .primary-navigation[data-visible='true'] {
+        transform: translateX(0);
+    }
+
+    .primary-navigation>* {
+        border: none;
+        padding: 0;
+    }
+}
+
+/* Tablet Responsive */
+@media (min-width: 35em) and (max-width: 45em) {
+    :root {
+        --fs-28: 20px;
+        --fs-18: 16px;
+        --fs-16: 14px;
+    }
+
+    body>header {
+        padding: 0 0 0 24px;
+    }
+
+    .underline-indicator>*>a>span {
+        display: none;
+    }
+
+    .primary-navigation {
+        padding-inline: 45px
+    }
+}
