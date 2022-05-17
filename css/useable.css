@@ -285,10 +285,6 @@ body>header {
     display: none;
 }
 
-.line {
-    display: none;
-}
-
 .primary-navigation {
     background: hsl(var(--clr-white) / .1);
     backdrop-filter: blur(2rem);
