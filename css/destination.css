@@ -10,11 +10,11 @@
     padding-inline: 24px;
 }
 
-.destination-navigation>*>* {
+.destination-navigation>* {
     color: hsl(var(--clr-accent));
 }
 
-.destination-navigation>.active>* {
+.destination-navigation>.active {
     color: hsl(var(--clr-white));
 }
 
@@ -30,7 +30,6 @@
     }
     
     .primary-navigation {
-        padding-inline-start: clamp(1rem, 8vw, 123px);
         padding-inline-end: clamp(1rem, 2.5vw, 165px);
     }
 
