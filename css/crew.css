@@ -1,0 +1,164 @@
+.crew {
+    background-size: cover;
+    background-position: center;
+    background-image: url(/assets/crew/background-crew-mobile.jpg);
+}
+
+.grid-crew {
+    text-align: center;
+}
+
+.grid-crew>.desc {
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-crew>.desc>*:first-child {
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-crew>.desc>*:first-child p {
+    max-width: 45ch;
+}
+
+.grid-crew>*:last-child {
+    border-bottom: 1px solid #383B4B;
+    ;
+    height: fit-content;
+}
+
+picture>img {
+    position: relative;
+    top: 6px;
+}
+
+@media (min-width: 45em) {
+    .crew {
+        background-image: url(/assets/crew/background-crew-desktop.jpg);
+    }
+
+    .primary-navigation {
+        padding-inline-end: clamp(1rem, 2.5vw, 165px);
+    }
+
+    .grid-crew {
+        margin-top: 60px;
+        text-align: left;
+        /* padding-inline: 165px 135px; */
+        justify-content: space-between;
+        grid-template-areas:
+            "title image"
+            "desc image"
+        ;
+        padding-inline-start: clamp(1rem, 7vw, 165px);
+        padding-inline-end: clamp(1rem, 7vw, 135px);
+    }
+
+    .grid-crew>*:first-child {
+        grid-area: title;
+    }
+
+    .grid-crew>*:last-child {
+        grid-area: image;
+    }
+
+    .grid-crew>.desc {
+        align-items: flex-start;
+        grid-area: desc;
+        gap: 120px;
+    }
+
+    .grid-crew>.desc>*:first-child {
+        align-items: flex-start;
+    }
+
+    picture>image {
+        width: 568px;
+        height: 712px;
+    }
+}
+
+@media (max-width: 35em) {
+    :root {
+        --fs-56: 24px;
+        --fs-32: 16px;
+        --fs-18: 15px
+    }
+
+    .grid-crew {
+        margin: 35px 0 105px;
+        padding-inline: 24px;
+    }
+
+    .grid-crew>*:last-child {
+        margin: 32px 0;
+        order: 1;
+
+    }
+
+    picture>img {
+        width: 177px;
+        height: 222px;
+    }
+
+    .grid-crew>.desc {
+        order: 2;
+        gap: 32px;
+    }
+
+    .slide-one-indicator {
+        order: 0;
+    }
+
+    .grid-crew>.desc>*:first-child {
+        order: 1;
+        gap: 0;
+    }
+
+    .grid-crew>.desc>*:first-child p {
+        line-height: 25px;
+        margin-top: 16px;
+    }
+}
+
+@media (min-width: 35em) and (max-width: 45em) {
+    :root {
+        --fs-56: 40px;
+        --fs-32: 24px;
+        --fs-28: 20px;
+        --fs-18: 16px;
+    }
+
+    .crew {
+        background-image: url(/assets/crew/background-crew-tablet.jpg);
+    }
+
+    .grid-crew {
+        margin-top: 40px;
+        margin-inline: 40px;
+    }
+
+    .grid-crew>*:first-child {
+        text-align: left;
+    }
+
+    .grid-crew>.desc {
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .grid-crew>.desc>*:first-child {
+        gap: 0;
+    }
+
+    .grid-crew>.desc>*:first-child p {
+        max-width: 50ch;
+    }
+
+    picture>img {
+        margin-top: 40px;
+        width: 456px;
+        height: 572px;
+    }
+}
