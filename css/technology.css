@@ -1,7 +1,7 @@
 .technology {
     background-size: cover;
     background-position: center;
-    background-image: url(/assets/technology/background-technology-mobile.jpg);
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
 }
 
 .grid-tech {
@@ -10,7 +10,7 @@
 
 picture>img {
     max-width: 100%;
-    content: url(/assets/technology/image-launch-vehicle-landscape.jpg);
+    content: url(../assets/technology/image-launch-vehicle-landscape.jpg);
 }
 
 .grid-tech>.desc {
@@ -66,11 +66,11 @@ picture>img {
     }
 
     .technology {
-        background-image: url(/assets/technology/background-technology-desktop.jpg);
+        background-image: url(../assets/technology/background-technology-desktop.jpg);
     }
 
     picture>img {
-        content: url(/assets/technology/image-launch-vehicle-portrait.jpg);
+        content: url(../assets/technology/image-launch-vehicle-portrait.jpg);
     }
 }
 
@@ -126,7 +126,7 @@ picture>img {
     }
 
     .technology {
-        background-image: url(/assets/technology/background-technology-tablet.jpg);
+        background-image: url(../assets/technology/background-technology-tablet.jpg);
     }
 
     .grid-tech {

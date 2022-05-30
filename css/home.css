@@ -1,7 +1,7 @@
 .home {
     background-size: cover;
     background-position: center;
-    background-image: url(/assets/home/background-home-mobile.jpg);
+    background-image: url(../assets/home/background-home-mobile.jpg);
 }
 
 
@@ -20,7 +20,7 @@
 
 @media (min-width: 45em) {
     .home {
-        background-image: url(/assets/home/background-home-desktop.jpg);
+        background-image: url(../assets/home/background-home-desktop.jpg);
     }
 
     .grid-home {
@@ -80,7 +80,7 @@
     }
 
     .home {
-        background-image: url(/assets/home/background-home-tablet.jpg);
+        background-image: url(../assets/home/background-home-tablet.jpg);
     }
 
     .grid-home {

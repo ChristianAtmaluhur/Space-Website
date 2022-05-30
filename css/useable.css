@@ -343,13 +343,13 @@ body>header {
         border: none;
         background: transparent;
         background-size: cover;
-        background-image: url(/assets/shared/icon-hamburger.svg);
+        background-image: url(../assets/shared/icon-hamburger.svg);
         cursor: pointer;
         z-index: 15;
     }
 
     .mobile-btn[aria-expanded='true'] {
-        background-image: url(/assets/shared/icon-close.svg);
+        background-image: url(../assets/shared/icon-close.svg);
     }
 
     .primary-navigation {

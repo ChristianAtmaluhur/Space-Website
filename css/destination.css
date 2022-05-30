@@ -1,7 +1,7 @@
 .destination {
     background-size: cover;
     background-position: center;
-    background-image: url(/assets/destination/background-destination-mobile.jpg);
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
 
 .grid-destination {
@@ -26,7 +26,7 @@
 
 @media (min-width: 45em) {
     .destination {
-        background-image: url(/assets/destination/background-destination-desktop.jpg);
+        background-image: url(../assets/destination/background-destination-desktop.jpg);
     }
     
     .primary-navigation {
@@ -159,7 +159,7 @@
     }
 
     .destination {
-        background-image: url(/assets/destination/background-destination-tablet.jpg);
+        background-image: url(../assets/destination/background-destination-tablet.jpg);
     }
 
     .grid-destination {
